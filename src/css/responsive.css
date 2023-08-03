@@ -1,0 +1,172 @@
+@media(max-width: 997px){
+    .header{
+        flex-direction: column;
+        padding: 20px 0 20px 0;
+        gap: 10px;
+        position: relative;
+    }
+
+    .header .logo{
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .header .menu{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        visibility: hidden;
+        padding: 40px 0 20px 20px;
+        border-radius: 10px 0 0 10px;
+        gap: 10px;
+        transition: 1s ease;
+        overflow: hidden;
+        width: 0;
+        height: 120%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 1;
+    }
+
+    .header .logo #menu-bar{
+        display: block;
+        width: 45px;
+        height: 40px;
+        margin-top: 40px;
+        z-index: 2;
+    }
+
+    .header #menu-bar .bar{
+        height: 5px;
+        width: 100%;
+        background-color: #fff;
+        display: block;
+        border-radius: 5px;
+        transition: .6s;
+    }
+
+    .header #menu-bar .bar.bar1{
+        transform: translateY(-8px);
+    }
+
+    .header #menu-bar .bar.bar3{
+        transform: translateY(8px);
+    }
+
+    .header #menu-bar .bar.bar1-x{
+        transform: translateY(6px);
+        rotate: -45deg;
+    }
+
+    .header #menu-bar .bar.bar2-x{
+        opacity: 0;
+    }
+
+    .header #menu-bar .bar.bar3-x{
+        transform: translateY(-6px);
+        rotate: 45deg;
+    }
+
+    .header .change-btn{
+        visibility: visible;
+        background-color: #a29df9;
+        width: 25%;
+        padding-right: 100px;
+    }
+
+    .home{
+        padding-top: 60px;
+    }
+
+    .portfolio .quadros,
+    .portfolio .canecas{
+        margin: 0 0 0 20px;
+        padding: 0;
+    }
+
+    .portfolio .arrows{
+        display: none;
+    }
+
+}
+
+@media(max-width: 768px){
+    .contatos .contatos-info{
+        grid-template-areas: "email instagram" 
+                            "facebook whatsapp" 
+                            "behance tiktok";
+    }
+
+    .home{
+        flex-wrap: wrap;
+    }
+
+    .header .change-btn{
+        width: 30%;
+    }
+
+    .sobre .sobre-info{
+        gap: 20px;
+        flex-wrap: wrap;
+    }   
+
+    .sobre .sobre-info{
+        padding: 30px;
+    }
+}
+
+@media (max-width: 425px){
+    .header h1{
+        font-size: 26px;
+    }
+    .header .logo div{
+        gap: 10px;
+    }
+
+    .header .menu{
+        height: 115%;
+    }
+
+    .header .change-btn{
+        width: 50%;
+    }   
+    
+    .portfolio .quadros,
+    .portfolio .canecas{
+        margin: 0;
+        padding-left: 10px;
+    }
+
+    .sobre .sobre-mim .hobbys{
+        text-align: center;
+    }
+
+    .contatos .contatos-info{
+        grid-template-areas: "email" "instagram" 
+                            "facebook" "whatsapp" 
+                            "behance" "tiktok";
+        row-gap: 3vw;
+    }
+}
+
+@media(max-width: 375px){
+    .header .menu{
+        height: 80%;
+    }
+
+    .header .logo div{
+        flex-wrap: wrap;
+    }
+    
+    .portfolio .quadros,
+    .portfolio .canecas{
+        margin: 0;
+        padding-left: 2px;
+    }
+
+    .orcamento h2{
+        font-size: 45px;
+    }
+}

@@ -1,0 +1,574 @@
+.container{
+    background-image: url(../imagens/fundo-do-site.png);
+}
+
+.container section{
+    margin-bottom: 80px;
+}
+
+.container h2{
+    font-size: 56px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.container p{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+/* HEADER */
+.header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #340068;
+    gap: 20px;
+}
+
+.header .logo div{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header .logo h1{
+    font-size: 36px;
+    font-weight: 800;
+}
+
+.header .logo .image-logo{ 
+    border-radius: 50%;
+    max-width: 110px;
+    max-height: 110px;
+}
+
+.header .logo #menu-bar{
+    display: none;
+}
+
+.header .menu{
+    display: flex;
+    gap: 30px;
+    font-size: 20px;
+    height: 30vh;
+    align-items: end;
+    margin-bottom: 20px;
+}
+
+.header .menu a{
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+.header .menu a:hover{
+    padding-bottom: 7px;
+    text-decoration: underline;
+}
+
+.header .social-media-menu{
+    display: flex;
+    gap: 10px;
+    position: relative;
+    flex-wrap: wrap-reverse;
+}
+
+.header .social-media-menu div p{
+    position: absolute;
+    visibility: hidden;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    left: -6%;
+    bottom: -30px;
+    font-weight: 600;
+    font-size: 17px;
+}
+
+.header .social-media-menu div:hover p{
+    visibility: visible;
+    animation: typing 2s steps(28) forwards,
+    blink .5s step-end infinite alternate;
+}
+
+@keyframes typing {
+    0%, 100%{
+        width: 0;
+    }
+    50%{
+        width: 100%;
+    }
+}
+@keyframes blink {
+    50%{
+        border-color: transparent;
+    }
+}
+
+.header .social-media-menu a{
+    color: #000;
+    background-color: #fff;
+    border: solid 2px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    transition: 0.5s ease-in-out;
+}
+
+.header .social-media-menu i{
+    transition: 0.5s ease-in-out;
+    transform: scale(1.3);
+    color: #000;
+}
+
+.header .social-media-menu a:hover{
+    scale: 1.2;
+    border-color: #fff;
+}
+
+.header .social-media-menu a:hover i{
+    color: #fff;
+}
+
+.header .social-media-menu div:nth-child(1) a:hover{
+    background-color: rgba(255, 255, 0, 0.815);
+}
+.header .social-media-menu a:nth-child(2):hover{
+    background: #f09433; 
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+    background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+}
+.header .social-media-menu a:nth-child(3):hover{
+    background-color: #000;
+}
+.header .social-media-menu a:nth-child(4):hover{
+    background-color: #053EFF;
+}
+.header .social-media-menu a:nth-child(5):hover{
+    background-color: #1877f2;
+}
+
+
+/* HOME */
+
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    gap: 20px;
+}
+
+.home .slider{
+    display: flex; 
+    align-items: center;
+    justify-content: center; 
+    max-width: 100%;
+    position: relative;
+    padding: 30px;
+}
+
+.home .slider .slides input{
+    display: none;
+}
+
+.home .slider .manual-navigation{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.home .slider .manual-navigation .manual-btn{
+    border: 2px solid #fff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.home .slider .manual-navigation .manual-btn:not(:last-child){
+    margin-right: 20px;
+}
+
+.home .slider .manual-navigation .manual-btn:hover{
+    background-color: #fff;
+}
+
+.slide{
+    display: none;
+    border-radius: 10px;
+}
+
+.active{
+    display: flex;
+}
+
+.btn-active{
+    background-color: #fff;
+}
+
+
+/* PORTIFOLIO */
+
+.portfolio .quadros,
+.portfolio .canecas{
+    margin: 0 30px 30px 30px;
+    position: relative;
+    width: 97%;
+}
+
+.portfolio .title{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.portfolio .title h3{
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.portfolio .quadros .arrows{
+    position: absolute;
+    top: 63%;
+    width: 100%;
+}
+
+.portfolio .canecas .arrows{
+    position: absolute;
+    top: 55%;
+    width: 100%;
+}
+
+.portfolio .arrows .arrow.left,
+.portfolio .arrows .arrow.right{
+    position: absolute;
+    z-index: 1;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: 4px solid #fff;
+    border-width: 4px 4px 0 0;
+    rotate: 43deg;
+    animation: move1 0.5s infinite alternate ease-in-out;
+    cursor: pointer;
+}
+
+.portfolio .arrows .arrow.right{
+    right: 10px;
+}
+.portfolio .arrows .arrow.left{
+    left: -8px;
+    rotate: 220deg;
+}
+
+@keyframes move1 {
+    from{
+        transform: translate(50%, -40%);
+    }
+}
+
+.portfolio .carrossel{
+    overflow-x: auto;
+    margin-bottom: 80px;
+}
+
+.portfolio .carrossel::-webkit-scrollbar{
+    display: none;
+}
+
+.portfolio .carrossel .galeria{
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 10px;
+}
+
+.portfolio .carrossel .galeria .imgs{
+    position: relative;
+    transition: 1s;
+    border-radius: 10px;
+}
+
+.portfolio .carrossel .galeria .imgs .img-quadros,
+.portfolio .carrossel .galeria .imgs .img-canecas{
+    border-radius: 10px;
+    flex-shrink: 0;
+    transition: all 1s ease-in-out;
+}
+
+.portfolio .carrossel .galeria .imgs .btn-comprar{
+    visibility: hidden;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 20%;
+    border: 2px solid transparent;
+    border-radius: 0 0 10px 10px;
+    background-color: #fff;
+    color: #000;
+    font-weight: 600;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.portfolio .carrossel .galeria .imgs:hover .btn-comprar{
+    background-color: rgba(255, 255, 0);
+}
+
+.portfolio .carrossel .galeria .imgs .show-btn{
+    visibility: visible;
+}
+
+
+/* ORÇAMENTO */
+
+.orcamento{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    padding: 30px;
+}
+
+.orcamento .info-orcamento{
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.orcamento .info-orcamento .btn-email,
+.orcamento .info-orcamento .btn{
+    background-color: transparent;
+    border-color: transparent;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.orcamento .info-orcamento .btn:hover{
+    transform: translateY(-10px);
+}
+.orcamento .info-orcamento .btn-email:hover{
+    text-decoration: underline;
+    transform: translateY(-10px);
+}
+
+.orcamento .info-orcamento a:hover{
+    text-decoration: underline; 
+}
+
+.orcamento .info-orcamento .span{
+    position: absolute;
+    z-index: 1;
+    right: 14%;
+    bottom: 30px;
+    padding: 5px 50px;
+    border-radius: 10px;
+    background-color: #fff;
+    color: #000;
+    font-size: 14px;
+    visibility: hidden;
+}
+
+.orcamento .info-orcamento .span-active{
+    visibility: visible;
+}
+
+.orcamento div{
+    margin-bottom: 20px;
+}
+
+.orcamento div p span{
+    font-size: 24px;
+    font-weight: 600;
+    margin-right: 15px;
+}
+
+
+/* SOBRE */
+
+.sobre{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sobre .sobre-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10%;
+    margin-bottom: 30px;
+}
+
+.sobre .sobre-info img{
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.sobre .sobre-info p{
+    max-width: 540px;
+}
+
+.sobre .sobre-mim{
+    display: flex;
+    width: 97%;
+    justify-content: space-evenly;
+    margin-bottom: 5px;
+}
+
+.sobre .sobre-mim h3{
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.sobre .sobre-mim i{
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    border: 2px solid #fff;
+    border-radius: 15px;
+}
+
+.sobre .sobre-mim .habilidades{
+    display: flex;
+    flex-direction: column;
+    margin-top: 3px;
+}
+
+.sobre .sobre-mim .habilidades div{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.gamepad{
+    grid-area: gamepad;
+}
+.pencil{
+    grid-area: pencil;
+}
+.youtube{
+    grid-area: youtube;
+}
+.music{
+    grid-area: music;
+}
+
+.sobre .sobre-mim .hobbys div{
+    display: grid;
+    grid-template-areas: "gamepad  pencil"
+                         "youtube  music";
+}
+
+.sobre .sobre-mim .hobbys div .gamepad, 
+.sobre .sobre-mim .hobbys div .pencil, 
+.sobre .sobre-mim .hobbys div .youtube, 
+.sobre .sobre-mim .hobbys div .music{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 5px 10px 0;
+}
+
+
+/* CONTATOS */
+
+.contatos{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 30px;
+    background-color: #340068;
+}
+
+
+
+.contatos .contatos-info a:nth-child(1){
+    grid-area: email;
+}
+.contatos .contatos-info a:nth-child(2){
+    grid-area: instagram;
+}
+.contatos .contatos-info a:nth-child(3){
+    grid-area: facebook;
+}
+.contatos .contatos-info a:nth-child(4){
+    grid-area: whatsapp;
+}
+.contatos .contatos-info a:nth-child(5){
+    grid-area: behance;
+}
+.contatos .contatos-info a:nth-child(6){
+    grid-area: tiktok;
+}
+
+.contatos .contatos-info{
+    display: grid;
+    row-gap: 1vw;
+    column-gap: 8vw;
+    grid-template-areas: "email instagram facebook"
+                         "whatsapp behance tiktok";
+}
+
+.contatos .contatos-info div{
+    position: relative;
+}
+
+.contatos .contatos-info div .span{
+    position: absolute;
+    z-index: 1;
+    right: 10%;
+    top: -140%;
+    padding: 5px 50px;
+    border-radius: 10px;
+    background-color: #fff;
+    color: #000;
+    font-size: 14px;
+    visibility: hidden;
+}
+
+.contatos .contatos-info .btn-email{
+    background-color: transparent;
+    border-color: transparent;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.contatos .contatos-info .btn-email:hover{
+    text-decoration: underline;
+    transform: translateY(-10px);
+}
+
+.contatos .contatos-info div .span-active{
+    visibility: visible;
+}
+
+.contatos .contatos-info .btn-email,
+.contatos .contatos-info a{
+    transition: 1s;
+}
+
+.contatos .contatos-info a:hover{
+    transform: translateY(-10px);
+    text-decoration: underline;
+}
